@@ -22,9 +22,16 @@ struct StringCalculatorView: View {
             TextField("Enter numbers (e.g. 1,2)", text: $input)
                 .textFieldStyle(.roundedBorder)
                 .padding()
-
+            
             Button("Calculate") {
-               print("result: \(input)")
+                print("result: \(input)")
+                do {
+                    let calc = StringCalculator()
+                    let value = try calc.add(input)
+                    result = "Result: \(value)"
+                } catch {
+                    result = error.localizedDescription
+                }
             }
             .buttonStyle(.borderedProminent)
             
