@@ -1,6 +1,6 @@
 //
-//  StringCalculator.swift
-//  StringCalculator
+//  StringCalculatorViewModel.swift
+//  StringCalculatorViewModel
 //
 //  Created by Dnyaneshwar Muley on 29/06/25.
 //
@@ -18,7 +18,7 @@ enum StringCalculatorError: Error, LocalizedError {
     }
 }
 
-struct StringCalculator {
+class StringCalculatorViewModel {
     func add(_ numbers: String) throws -> Int {
         guard !numbers.isEmpty else { return 0 }
 

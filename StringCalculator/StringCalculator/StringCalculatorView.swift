@@ -26,7 +26,7 @@ struct StringCalculatorView: View {
             Button("Calculate") {
                 print("result: \(input)")
                 do {
-                    let calc = StringCalculator()
+                    let calc = StringCalculatorViewModel()
                     let value = try calc.add(input)
                     result = "Result: \(value)"
                 } catch {
